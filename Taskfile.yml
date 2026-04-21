@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+vars:
+  GREETING: Hello, world!
+
+tasks:
+  default:
+    desc: Print a greeting message
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+
+  build:
+    desc: Build with gradle wrapper without running unit tests
+    cmd: ./gradlew build -x test
+
+  build-native:
+    desc: Build native build binary with GraalVM
+    cmd: ./gradlew nativeCompile
+
+  run-native:
+    desc: Run the native binary from local build
+    cmd: ./build/native/nativeCompile/gh-paw {{.CLI_ARGS}}
+
