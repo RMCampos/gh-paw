@@ -1,0 +1,42 @@
+[
+  {
+    "name": "io.ktor.network.selector.InterestSuspensionsMap",
+    "allDeclaredFields": true,
+    "fields": [
+      { "name": "readHandlerReference" },
+      { "name": "writeHandlerReference" },
+      { "name": "connectHandlerReference" },
+      { "name": "acceptHandlerReference" }
+    ]
+  },
+  {
+    "name": "io.ktor.network.sockets.SocketImpl",
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true
+  },
+  {
+    "name": "io.ktor.network.selector.InterestSuspension",
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true
+  },
+  {
+    "name": "org.slf4j.LoggerFactory",
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "org.slf4j.helpers.NOPLoggerFactory",
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredConstructors": true
+  }
+]

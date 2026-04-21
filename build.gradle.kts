@@ -20,7 +20,7 @@ dependencies {
     implementation("com.github.ajalt.mordant:mordant:2.3.0")
 
     // HTTP Client (Ktor) - Using CIO engine for better GraalVM compatibility
-    val ktorVersion = "2.3.10"
+    val ktorVersion = "2.3.12"
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
     implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
@@ -31,7 +31,10 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+
+    // Logging Implementation
+    implementation("org.slf4j:slf4j-simple:2.0.13")
 
     testImplementation(kotlin("test"))
 }
@@ -51,5 +54,8 @@ graalvmNative {
             mainClass.set("com.github.ricardo.MainKt")
             buildArgs.add("--no-fallback")
         }
+    }
+    metadataRepository {
+        enabled.set(true)
     }
 }
